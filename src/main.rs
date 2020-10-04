@@ -1,12 +1,8 @@
+mod p1;
+mod p2;
+mod p3;
 fn main() {
-    println!("{}", p1(1000));
-}
-
-fn p1(max: u32) -> u32 {
-    (1..max).filter(|x| x % 3 == 0 || x % 5 == 0).sum()
-}
-
-#[test]
-fn test_p1() {
-    assert_eq!(p1(1000), 233168)
+    println!("{}", p1::p1(1_000));
+    println!("{}", p2::p2(4_000_000));
+    println!("{}", p3::p3(600_851_475_143));
 }
